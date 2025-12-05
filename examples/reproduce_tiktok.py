@@ -4,17 +4,17 @@ import sys
 import matplotlib.patches as patches
 import matplotlib.pyplot as plt
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def main():
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Colors
-    palette = plottheme.themes.CLEAN_MODERN_TIKTOK_PALETTE
+    palette = pressplot.themes.CLEAN_MODERN_TIKTOK_PALETTE
     c_red = palette["red"]
     c_pink = palette["pink"]
     c_grey = palette["grey"]
@@ -88,7 +88,7 @@ def main():
 
     # Save
     final_file = "reproduce_tiktok.png"
-    plottheme.save_clean_modern_style(fig, final_file)
+    pressplot.save_clean_modern_style(fig, final_file)
     print(f"Saved {final_file}")
 
 

@@ -1,6 +1,6 @@
-# PlotTheme
+# PressPlot
 
-**PlotTheme** 是一个用于管理和应用自定义 Matplotlib 绘图风格的基础设施库。
+**PressPlot** (formerly PlotTheme) 是一个用于管理和应用自定义 Matplotlib 绘图风格的基础设施库。
 
 它提供了一套灵活的 API 来定义、注册和应用绘图主题，旨在帮助科研人员和开发者轻松维护一致的图表风格。
 
@@ -23,11 +23,11 @@ pip install .
 
 ```python
 import matplotlib.pyplot as plt
-import plottheme
+import pressplot
 import numpy as np
 
 # 1. 加载 Clean Modern 风格
-plottheme.load_theme("clean_modern")
+pressplot.load_theme("clean_modern")
 
 # 2. 绘图
 x = np.linspace(0, 10, 100)
@@ -39,8 +39,8 @@ line1, = ax.plot(x, y1, label='Sine')
 line2, = ax.plot(x, y2, label='Cosine')
 
 # 3. 使用辅助函数添加行内标注 (Line Annotation)
-plottheme.label_line(ax, line1, "Sine Wave", x=8)
-plottheme.label_line(ax, line2, "Cosine Wave", x=2)
+pressplot.label_line(ax, line1, "Sine Wave", x=8)
+pressplot.label_line(ax, line2, "Cosine Wave", x=2)
 
 ax.set_title("Trigonometric Functions", loc='left')
 plt.show()
@@ -51,7 +51,7 @@ plt.show()
 你可以通过代码动态注册一个主题：
 
 ```python
-import plottheme
+import pressplot
 
 # 定义主题参数
 my_rc_params = {
@@ -65,15 +65,62 @@ my_rc_params = {
 my_palette = ["#E63946", "#F1FAEE", "#A8DADC", "#457B9D", "#1D3557"]
 
 # 注册主题
-plottheme.register_theme("my_custom_style", my_rc_params, palette=my_palette)
+pressplot.register_theme("my_custom_style", my_rc_params, palette=my_palette)
 
 # 应用
-plottheme.load_theme("my_custom_style")
+pressplot.load_theme("my_custom_style")
 ```
 
 ## API 参考
 
-- `plottheme.load_theme(name)`: 应用指定名称的主题。
-- `plottheme.register_theme(name, rc_params, palette)`: 注册新主题。
-- `plottheme.list_themes()`: 列出所有可用主题。
-- `plottheme.label_line(ax, line, label, ...)`: 在折线上添加彩色文本标注。
+- `pressplot.load_theme(name)`: 应用指定名称的主题。
+- `pressplot.register_theme(name, rc_params, palette)`: 注册新主题。
+- `pressplot.list_themes()`: 列出所有可用主题。
+- `pressplot.label_line(ax, line, label, ...)`: 在折线上添加彩色文本标注。
+- `pressplot.add_border(input_path, output_path, ...)`: 为图片添加出版级边框。
+
+## Gallery
+
+以下是使用 PressPlot 复刻的经典图表案例：
+
+### 1. Political & Social Issues
+
+| Government Shutdown Blame | Support for Political Violence |
+|:---:|:---:|
+| ![Shutdown](reproduce_shutdown.png) | ![Political Violence](reproduce_political_violence.png) |
+
+| Nobel Laureates | Passport Issuance |
+|:---:|:---:|
+| ![Nobel](reproduce_nobel.png) | ![Passport](reproduce_passport.png) |
+
+### 2. Economics & Policy
+
+| One Big Beautiful Bill Act | Manufacturing Output |
+|:---:|:---:|
+| ![Bill Act](reproduce_bill_act.png) | ![Manufacturing](reproduce_manufacturing.png) |
+
+| Tariff Impact | Tech Stocks |
+|:---:|:---:|
+| ![Tariff](reproduce_tariff.png) | ![Tech](reproduce_tech.png) |
+
+### 3. Maps & Demographics
+
+| Greenland | World Map (Obesity Rates) |
+|:---:|:---:|
+| ![Greenland](reproduce_greenland.png) | ![Map](reproduce_map.png) |
+
+| French Children Maths Performance | Drinking Habits |
+|:---:|:---:|
+| ![French Math](reproduce_french_math.png) | ![Drinking](reproduce_drinking.png) |
+
+### 4. Social Media & Tech
+
+| TikTok Usage | Bubble Chart Example |
+|:---:|:---:|
+| ![TikTok](reproduce_tiktok.png) | ![Bubble](reproduce_bubble.png) |
+
+### 5. Basic Demos
+
+| Scatter Plot | Theme Overview |
+|:---:|:---:|
+| ![Scatter](reproduce_scatter.png) | ![Theme](replicate_clean_modern_packaged.png) |

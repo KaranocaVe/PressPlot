@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "plottheme"
+name = "pressplot"
 version = "0.1.0"
 description = "A robust infrastructure for managing and applying custom matplotlib plot themes."
 authors = [
@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [tool.setuptools.package-data]
-plottheme = ["fonts/Swift/*.ttf", "fonts/Swift/*.otf"]
+pressplot = ["fonts/Swift/*.ttf", "fonts/Swift/*.otf"]
 requires-python = ">=3.8"
 readme = "README.md"
 license = { text = "MIT" }

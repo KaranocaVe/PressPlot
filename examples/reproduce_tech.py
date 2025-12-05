@@ -4,17 +4,17 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def main():
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Colors
-    palette = plottheme.themes.CLEAN_MODERN_TECH_PALETTE
+    palette = pressplot.themes.CLEAN_MODERN_TECH_PALETTE
     red_color = palette["highlight_red"]
     light_red = palette["light_red"]  # Maybe use this for lines? Or just same red with opacity?
     # Actually lines look slightly lighter in image, but it might just be anti-aliasing.
@@ -124,7 +124,7 @@ def main():
 
     # Save
     final_file = "reproduce_tech.png"
-    plottheme.save_clean_modern_style(fig, final_file)
+    pressplot.save_clean_modern_style(fig, final_file)
     print(f"Saved {final_file}")
 
 

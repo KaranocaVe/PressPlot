@@ -3,14 +3,14 @@ import sys
 
 import matplotlib.pyplot as plt
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def main():
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Colors
     blue_color = "#4A6FA5"  # Soft blue (Dems)
@@ -126,7 +126,7 @@ def main():
 
     # Save
     output_file = "reproduce_political_violence.png"
-    plottheme.save_clean_modern_style(fig, output_file)
+    pressplot.save_clean_modern_style(fig, output_file)
     print(f"Saved {output_file}")
 
 

@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import make_interp_spline
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def generate_smooth_curve(x_points, y_points, n_points=100, noise_level=0.5):
@@ -26,7 +26,7 @@ def generate_smooth_curve(x_points, y_points, n_points=100, noise_level=0.5):
 
 
 def main():
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Colors
     # Using the palette from themes.py or approximating from image
@@ -140,7 +140,7 @@ def main():
 
     # Save
     final_file = "reproduce_french_math.png"
-    plottheme.save_clean_modern_style(fig, final_file)
+    pressplot.save_clean_modern_style(fig, final_file)
     print(f"Saved {final_file}")
 
 

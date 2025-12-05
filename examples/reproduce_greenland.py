@@ -7,15 +7,15 @@ import matplotlib.path as mpath
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def main():
     # Load theme
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Colors
     bg_color = "#F1F0EA"  # Page background
@@ -89,7 +89,7 @@ def main():
 
     # Save using the theme function which handles border addition
     output_file = "reproduce_greenland.png"
-    plottheme.save_clean_modern_style(fig, output_file,
+    pressplot.save_clean_modern_style(fig, output_file,
                                       border_color=bg_color,
                                       border_width=50,
                                       dpi=300,

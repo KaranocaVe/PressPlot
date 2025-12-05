@@ -4,17 +4,17 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def main():
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Colors
-    palette = plottheme.themes.CLEAN_MODERN_SCATTER_PALETTE
+    palette = pressplot.themes.CLEAN_MODERN_SCATTER_PALETTE
     dot_color = palette["dot_color"]
     line_color = palette["line_color"]
     text_color = palette["text_color"]
@@ -108,7 +108,7 @@ def main():
 
     # Save
     final_file = "reproduce_scatter.png"
-    plottheme.save_clean_modern_style(fig, final_file)
+    pressplot.save_clean_modern_style(fig, final_file)
     print(f"Saved {final_file}")
 
 

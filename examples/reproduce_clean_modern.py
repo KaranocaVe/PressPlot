@@ -4,15 +4,15 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def main():
     # 1. Load the new theme (fonts are auto-registered)
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Image Size: 12.8 x 7.2 inches (matches 1280x720 at 100 DPI)
     FIG_W = 12.8
@@ -49,7 +49,7 @@ def main():
     ax = fig.add_axes((0.05, 0.15, 0.90, 0.73))
     # ax.set_position((0.08, 0.16, 0.84, 0.68)) # Previous "Extra Margin" attempt
 
-    theme = plottheme.get_theme("clean_modern")
+    theme = pressplot.get_theme("clean_modern")
     palette = theme.palette
     red = palette[0]
     grey = palette[1]
@@ -116,7 +116,7 @@ def main():
 
     final_file = "replicate_clean_modern_packaged.png"
 
-    plottheme.save_clean_modern_style(fig, final_file)
+    pressplot.save_clean_modern_style(fig, final_file)
     print(f"Plot saved to {final_file}")
 
 

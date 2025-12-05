@@ -4,14 +4,14 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def main():
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     fig, ax = plt.subplots(figsize=(12, 7))
 
@@ -140,7 +140,7 @@ def main():
     ax.set_ylim(-0.1, 1.5)
 
     final_file = "reproduce_bubble.png"
-    plottheme.save_clean_modern_style(fig, final_file)
+    pressplot.save_clean_modern_style(fig, final_file)
     print(f"Saved {final_file}")
 
 

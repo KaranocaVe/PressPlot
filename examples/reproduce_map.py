@@ -6,14 +6,14 @@ import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def main():
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Load World Data
     # We assume world.geojson is in the current directory or same directory as script
@@ -82,7 +82,7 @@ def main():
 
     # Save
     final_file = "reproduce_map.png"
-    plottheme.save_clean_modern_style(fig, final_file, border_width=0)
+    pressplot.save_clean_modern_style(fig, final_file, border_width=0)
     print(f"Saved {final_file}")
 
 

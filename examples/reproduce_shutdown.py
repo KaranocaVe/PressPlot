@@ -4,14 +4,14 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def main():
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Data
     categories = ["Republican", "Independent", "Democrat"]
@@ -19,7 +19,7 @@ def main():
 
     # Colors (approximated from image)
     # Use theme palette
-    palette = plottheme.themes.CLEAN_MODERN_DIVERGING_PALETTE
+    palette = pressplot.themes.CLEAN_MODERN_DIVERGING_PALETTE
 
     # Text Colors
     blue_text = palette["blue_text"]
@@ -115,7 +115,7 @@ def main():
 
     # Save
     final_file = "reproduce_shutdown.png"
-    plottheme.save_clean_modern_style(fig, final_file)
+    pressplot.save_clean_modern_style(fig, final_file)
     print(f"Saved {final_file}")
 
 

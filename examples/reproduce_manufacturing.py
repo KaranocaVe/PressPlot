@@ -4,10 +4,10 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 from scipy.interpolate import make_interp_spline
 
 
@@ -19,10 +19,10 @@ def smooth_line(x, y, points=300):
 
 
 def main():
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Colors
-    colors = plottheme.themes.CLEAN_MODERN_MANUFACTURING_PALETTE
+    colors = pressplot.themes.CLEAN_MODERN_MANUFACTURING_PALETTE
     blue_germany = colors[0]
     pink_britain = colors[1]
     grey_us = colors[2]
@@ -113,7 +113,7 @@ def main():
 
     # Save
     final_file = "reproduce_manufacturing.png"
-    plottheme.save_clean_modern_style(fig, final_file)
+    pressplot.save_clean_modern_style(fig, final_file)
     print(f"Saved {final_file}")
 
 

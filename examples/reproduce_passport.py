@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import make_interp_spline
 
-# Add parent directory to path to import plottheme
+# Add parent directory to path to import pressplot
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import plottheme
+import pressplot
 
 
 def smooth_line(x, y, num_points=300):
@@ -20,7 +20,7 @@ def smooth_line(x, y, num_points=300):
 
 
 def main():
-    plottheme.load_theme("clean_modern")
+    pressplot.load_theme("clean_modern")
 
     # Data (Approximate from image)
     years = np.array([2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025])
@@ -41,7 +41,7 @@ def main():
     y_grid = np.arange(1, 11)
     # X axis: 2015 to 2025
     x_grid = years
-    plottheme.draw_dot_grid(ax, x_grid, y_grid, color='#B6B6A9', size=25)
+    pressplot.draw_dot_grid(ax, x_grid, y_grid, color='#B6B6A9', size=25)
 
     # Plot Smooth Lines
     # We need to handle the "step" nature or "bump" nature. 
@@ -107,7 +107,7 @@ def main():
     # They seem to float.
 
     final_file = "reproduce_passport.png"
-    plottheme.save_clean_modern_style(fig, final_file,
+    pressplot.save_clean_modern_style(fig, final_file,
                                       border_width=0)  # No extra border needed for this specific look? Or maybe yes.
     print(f"Saved {final_file}")
 
