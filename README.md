@@ -11,6 +11,52 @@
 - **风格管理**: 支持自定义和注册新的绘图风格。
 - **实用工具**: 提供添加边框、行内标注等辅助功能，完善绘图工作流。
 
+## Gallery
+
+以下是使用 PressPlot 复刻的经典图表案例：
+
+### 1. Political & Social Issues
+
+| Government Shutdown Blame | Support for Political Violence |
+|:---:|:---:|
+| ![Shutdown](reproduce_shutdown.png) | ![Political Violence](reproduce_political_violence.png) |
+
+| Nobel Laureates | Passport Issuance |
+|:---:|:---:|
+| ![Nobel](reproduce_nobel.png) | ![Passport](reproduce_passport.png) |
+
+### 2. Economics & Policy
+
+| One Big Beautiful Bill Act | Manufacturing Output |
+|:---:|:---:|
+| ![Bill Act](reproduce_bill_act.png) | ![Manufacturing](reproduce_manufacturing.png) |
+
+| Tariff Impact | Tech Stocks |
+|:---:|:---:|
+| ![Tariff](reproduce_tariff.png) | ![Tech](reproduce_tech.png) |
+
+### 3. Maps & Demographics
+
+| Greenland | World Map (Obesity Rates) |
+|:---:|:---:|
+| ![Greenland](reproduce_greenland.png) | ![Map](reproduce_map.png) |
+
+| French Children Maths Performance | Drinking Habits |
+|:---:|:---:|
+| ![French Math](reproduce_french_math.png) | ![Drinking](reproduce_drinking.png) |
+
+### 4. Social Media & Tech
+
+| TikTok Usage | Bubble Chart Example |
+|:---:|:---:|
+| ![TikTok](reproduce_tiktok.png) | ![Bubble](reproduce_bubble.png) |
+
+### 5. Basic Demos
+
+| Scatter Plot | Theme Overview |
+|:---:|:---:|
+| ![Scatter](reproduce_scatter.png) | ![Theme](replicate_clean_modern_packaged.png) |
+
 ## 安装
 
 ```bash
@@ -78,49 +124,3 @@ pressplot.load_theme("my_custom_style")
 - `pressplot.list_themes()`: 列出所有可用主题。
 - `pressplot.label_line(ax, line, label, ...)`: 在折线上添加彩色文本标注。
 - `pressplot.add_border(input_path, output_path, ...)`: 为图片添加出版级边框。
-
-## Gallery
-
-以下是使用 PressPlot 复刻的经典图表案例：
-
-### 1. Political & Social Issues
-
-| Government Shutdown Blame | Support for Political Violence |
-|:---:|:---:|
-| ![Shutdown](reproduce_shutdown.png) | ![Political Violence](reproduce_political_violence.png) |
-
-| Nobel Laureates | Passport Issuance |
-|:---:|:---:|
-| ![Nobel](reproduce_nobel.png) | ![Passport](reproduce_passport.png) |
-
-### 2. Economics & Policy
-
-| One Big Beautiful Bill Act | Manufacturing Output |
-|:---:|:---:|
-| ![Bill Act](reproduce_bill_act.png) | ![Manufacturing](reproduce_manufacturing.png) |
-
-| Tariff Impact | Tech Stocks |
-|:---:|:---:|
-| ![Tariff](reproduce_tariff.png) | ![Tech](reproduce_tech.png) |
-
-### 3. Maps & Demographics
-
-| Greenland | World Map (Obesity Rates) |
-|:---:|:---:|
-| ![Greenland](reproduce_greenland.png) | ![Map](reproduce_map.png) |
-
-| French Children Maths Performance | Drinking Habits |
-|:---:|:---:|
-| ![French Math](reproduce_french_math.png) | ![Drinking](reproduce_drinking.png) |
-
-### 4. Social Media & Tech
-
-| TikTok Usage | Bubble Chart Example |
-|:---:|:---:|
-| ![TikTok](reproduce_tiktok.png) | ![Bubble](reproduce_bubble.png) |
-
-### 5. Basic Demos
-
-| Scatter Plot | Theme Overview |
-|:---:|:---:|
-| ![Scatter](reproduce_scatter.png) | ![Theme](replicate_clean_modern_packaged.png) |
