@@ -1,15 +1,15 @@
 # PressPlot
 
-**PressPlot** (formerly PlotTheme) 是一个用于管理和应用自定义 Matplotlib 绘图风格的基础设施库。
+**PressPlot** (formerly PlotTheme) 是一个专注于出版级质量的 Matplotlib 绘图主题库。
 
-它提供了一套灵活的 API 来定义、注册和应用绘图主题，旨在帮助科研人员和开发者轻松维护一致的图表风格。
+它内置了精心设计的风格（如 "clean_modern"），旨在帮助科研人员和开发者用最少的代码绘制出美观、专业、符合顶级期刊标准的图表。
 
 ## 核心功能
 
-- **主题定义 (Theme Definition)**: 将 Matplotlib 的 `rcParams` 和颜色循环 (Color Cycle) 封装在一个 `Theme` 对象中。
-- **主题注册 (Registry)**: 集中管理多个主题，支持运行时动态注册。
-- **一键应用**: 通过简单的 API 切换全局绘图风格。
-- **预设风格**: 内置了 "clean_modern" 等出版级风格。
+- **出版级预设 (Publication-Ready Themes)**: 内置 "clean_modern" 等经过细致打磨的风格，开箱即用。
+- **一键美化**: 简单的 API 即可让图表焕然一新。
+- **风格管理**: 支持自定义和注册新的绘图风格。
+- **实用工具**: 提供添加边框、行内标注等辅助功能，完善绘图工作流。
 
 ## 安装
 
